@@ -82,11 +82,11 @@
   [:main
    [:h1 (presentation :title)]
    [:section
-    [:h1 "Kapitoly"]
+    [:h1 ""আপনার প্রেজেন্টেশন তৈরি করুন!"]
     (seq [chapter :in (presentation :chapters)]
       [:p
        [:h3 (chapter :title)]
-       [:span (length (chapter :slides)) " slajdy"]])]
+       [:span (length (chapter :slides)) "স্লাইড"]])]
    [:nav {:class "f-row"} [:a {:href "/edit"} "editovat"] [:a {:href "/start"} "start"]]])
 
 # Handlers
