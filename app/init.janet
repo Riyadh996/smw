@@ -87,7 +87,7 @@
       [:p
        [:h3 (chapter :title)]
        [:span (length (chapter :slides)) "স্লাইড"]])]
-   [:nav {:class "f-row"} [:a {:href "/edit"} "editovat"] [:a {:href "/start"} "start"]]])
+   [:nav {:class "f-row"} [:a {:href "/edit"} "সম্পাদনা"] [:a {:href "/start"} "শুরু"]]])
 
 # Handlers
 (defn /index
@@ -110,7 +110,7 @@
   [&]
   (define :view)
   (http/page app {:content (http/page form {:content (get-in view [:presentation :content])
-                                            :message "Editace prezentace!"})}))
+                                            :message "একটি উপস্থাপনা সম্পাদনা!"})}))
 
 (defn /start
   "Start presentation"
