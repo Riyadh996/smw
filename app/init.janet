@@ -82,12 +82,12 @@
   [:main
    [:h1 (presentation :title)]
    [:section
-    [:h1 ""আপনার প্রেজেন্টেশন তৈরি করুন!"]
+    [:h1 ""আপনার উপস্থাপনা তৈরি করুন!"]
     (seq [chapter :in (presentation :chapters)]
       [:p
        [:h3 (chapter :title)]
        [:span (length (chapter :slides)) "স্লাইড"]])]
-   [:nav {:class "f-row"} [:a {:href "/edit"} "সম্পাদনা"] [:a {:href "/start"} "শুরু"]]])
+   [:nav {:class "f-row"} [:a {:href "/edit"} "ঠিক করা হয়েছে"] [:a {:href "/start"} "শুরু"]]])
 
 # Handlers
 (defn /index
@@ -110,7 +110,7 @@
   [&]
   (define :view)
   (http/page app {:content (http/page form {:content (get-in view [:presentation :content])
-                                            :message "একটি উপস্থাপনা সম্পাদনা!"})}))
+                                            :message "উপস্থাপনার  সম্পাদনা করা হয়েছে!"})}))
 
 (defn /start
   "Start presentation"
